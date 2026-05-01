@@ -14,6 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/hero1.avif"
+      type="image/avif"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -38,7 +45,19 @@
       <section class="hero" aria-label="Campaign introduction">
         <div class="hero-art" aria-hidden="true">
           <div class="sun-disc"></div>
-          <img class="portrait-photo" src="assets/hero1.png" alt="" />
+          <picture>
+            <source srcset="assets/hero1.avif" type="image/avif" />
+            <source srcset="assets/hero1.webp" type="image/webp" />
+            <img
+              class="portrait-photo"
+              src="assets/hero1.jpg"
+              width="1024"
+              height="1536"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
           <div class="crowd crowd-one"></div>
           <div class="crowd crowd-two"></div>
           <div class="flag-stripe"></div>
@@ -64,7 +83,18 @@
           </p>
         </div>
         <figure class="intro-image">
-          <img src="assets/abuja-community.png" alt="Abuja residents gathered for a civic campaign conversation" />
+          <picture>
+            <source srcset="assets/abuja-community.avif" type="image/avif" />
+            <source srcset="assets/abuja-community.webp" type="image/webp" />
+            <img
+              src="assets/abuja-community.jpg"
+              width="1280"
+              height="640"
+              alt="Abuja residents gathered for a civic campaign conversation"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </figure>
       </section>
 
@@ -75,25 +105,41 @@
         </div>
         <div class="agenda-grid">
           <article>
-            <img src="assets/abuja-enterprise.png" alt="" />
+            <picture>
+              <source srcset="assets/abuja-enterprise.avif" type="image/avif" />
+              <source srcset="assets/abuja-enterprise.webp" type="image/webp" />
+              <img src="assets/abuja-enterprise.jpg" width="1280" height="853" alt="" loading="lazy" decoding="async" />
+            </picture>
             <span>01</span>
             <h3>Jobs and enterprise</h3>
             <p>Back Abuja's traders, artisans, tech workers, and young entrepreneurs with skills, credit access, and market infrastructure.</p>
           </article>
           <article>
-            <img src="assets/abuja-security.png" alt="" />
+            <picture>
+              <source srcset="assets/abuja-security.avif" type="image/avif" />
+              <source srcset="assets/abuja-security.webp" type="image/webp" />
+              <img src="assets/abuja-security.jpg" width="1280" height="853" alt="" loading="lazy" decoding="async" />
+            </picture>
             <span>02</span>
             <h3>Community security</h3>
             <p>Strengthen lawful community policing, emergency response, lighting, and local intelligence partnerships across the FCT.</p>
           </article>
           <article>
-            <img src="assets/abuja-skills.png" alt="" />
+            <picture>
+              <source srcset="assets/abuja-skills.avif" type="image/avif" />
+              <source srcset="assets/abuja-skills.webp" type="image/webp" />
+              <img src="assets/abuja-skills.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async" />
+            </picture>
             <span>03</span>
             <h3>Education and skills</h3>
             <p>Expand scholarships, technical colleges, digital literacy, teacher support, and school improvement partnerships.</p>
           </article>
           <article>
-            <img src="assets/abuja-community.png" alt="" />
+            <picture>
+              <source srcset="assets/abuja-community.avif" type="image/avif" />
+              <source srcset="assets/abuja-community.webp" type="image/webp" />
+              <img src="assets/abuja-community.jpg" width="1280" height="640" alt="" loading="lazy" decoding="async" />
+            </picture>
             <span>04</span>
             <h3>Transparent service</h3>
             <p>Publish Abuja constituency updates, project tracking, open town halls, and regular area council office hours.</p>
@@ -103,7 +149,18 @@
 
       <section class="service section-pad" id="service">
         <div class="service-visual">
-          <img src="assets/abuja-security.png" alt="Community leaders discussing safety and public service planning" />
+          <picture>
+            <source srcset="assets/abuja-security.avif" type="image/avif" />
+            <source srcset="assets/abuja-security.webp" type="image/webp" />
+            <img
+              src="assets/abuja-security.jpg"
+              width="1280"
+              height="853"
+              alt="Community leaders discussing safety and public service planning"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div class="service-copy">
           <div class="section-kicker">How he will serve</div>
@@ -135,7 +192,18 @@
           </p>
         </div>
         <div class="movement-media">
-          <img src="assets/abuja-skills.png" alt="Young Abuja residents taking part in skills and technology training" />
+          <picture class="movement-photo">
+            <source srcset="assets/abuja-skills.avif" type="image/avif" />
+            <source srcset="assets/abuja-skills.webp" type="image/webp" />
+            <img
+              src="assets/abuja-skills.jpg"
+              width="1280"
+              height="720"
+              alt="Young Abuja residents taking part in skills and technology training"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="movement-stats" aria-label="Campaign organizing goals">
             <div>
               <strong>120+</strong>
@@ -182,6 +250,6 @@
       <p>Call: +234 800 000 2027 | Email: hello@ciromaforsenate.ng</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
