@@ -621,7 +621,8 @@ h3 {
 
 .election-copy p,
 .seo-panel p,
-.states-list p {
+.states-list p,
+.why-southcast p {
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.8;
@@ -644,7 +645,8 @@ h3 {
 }
 
 .seo-panel h3,
-.states-list h3 {
+.states-list h3,
+.why-southcast h3 {
   margin-bottom: 0;
 }
 
@@ -658,6 +660,14 @@ h3 {
 
 .states-list {
   grid-column: 1 / -1;
+  padding-top: clamp(18px, 3vw, 28px);
+  border-top: 1px solid var(--line);
+}
+
+.why-southcast {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 14px;
   padding-top: clamp(18px, 3vw, 28px);
   border-top: 1px solid var(--line);
 }
