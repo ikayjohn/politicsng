@@ -344,11 +344,19 @@ h3 {
   background: var(--primary-dark);
 }
 
+.intro-image picture,
+.service-visual picture,
+.movement-photo,
 .intro-image img,
 .service-visual img,
 .movement-photo img {
   width: 100%;
   height: 100%;
+}
+
+.intro-image img,
+.service-visual img,
+.movement-photo img {
   object-fit: cover;
 }
 
@@ -550,10 +558,6 @@ h3 {
   grid-template-columns: 1fr 1fr;
   gap: clamp(32px, 5vw, 56px);
   align-items: stretch;
-}
-
-.movement-photo {
-  display: block;
 }
 
 .movement-photo img {
